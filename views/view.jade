@@ -68,8 +68,8 @@ html(lang='en')
         form(action="/", method="get")
           .hero-unit.span10.offset1
             .span9.offset2.actions
-            table(border="1")
-              tr
+            table.table.table-striped
+              tr.success
                 td Title
                 td Description
                 td Author
@@ -78,4 +78,4 @@ html(lang='en')
                   td #{task.title}
                   td #{task.description}
                   td #{task.author}
-                  td
+                  
