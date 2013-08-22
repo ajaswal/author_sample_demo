@@ -17,7 +17,7 @@ AuthorTasks.prototype = {
     });
   },
 
-
+//Add values in the database
   addTask: function(req,res) {
     var item = req.body.item;
     newTask = new task();
@@ -25,6 +25,7 @@ AuthorTasks.prototype = {
     newTask.description = item.desc;
     newTask.author = item.authr;
     newTask.save(function savedTask(err){
+      
       if(err) {
         throw err;
       }
