@@ -31,10 +31,9 @@ AuthorTasks.prototype = {
   },
 
  view: function(req,res) {
-    showAll: function(req, res) {
-    task.find({titleCreated: true}, function foundTasks(err, items) {
-      res.render('view',{title: 'All the items ', tasks: items})
+   task.find({titleCreated: true}, function foundTasks(err, items) {
+     res.render('view',{title: 'All the items ', tasks: items})
     });
     }
- }
 }
+    
