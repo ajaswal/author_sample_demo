@@ -1,0 +1,71 @@
+!!! 5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Web App
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css')
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css')
+    link(rel='stylesheet', href='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css')
+    script(src='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js')
+    script(src='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js')
+    link(href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800', rel='stylesheet', type='text/css')
+    style(type='text/css')
+      @media (min-width: 980px) {
+      body {
+      padding-top: 60px;
+      }
+      .linediv-l {
+      border-right: 1px white solid;
+      }
+      .linediv-r {
+      border-left: 1px white solid;
+      }
+      }
+      body{
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      background-image: url(../images/patt.png);
+      }
+      .heading, .subheading {
+      font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      text-align: center;
+      color: #ffffff
+      }
+      p.lead {
+      padding-top: 1.5%;
+      font-size: 24px;
+      line-height: 30px;
+      }
+      p {
+      font-size: 18px;
+      line-height: 24px;
+      }
+      .hero-unit{
+      background-color: #f5f580;
+      opacity: .8;
+      }
+  body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand Write for India
+          .nav-collapse.collapse
+            ul.nav
+              li.active
+                a(href='./index.html') Write
+              li
+                a(href='./view.html') View
+    .container
+      .row-fluid.heading
+        .span12
+          h1 Please fill the form
+      .row-fluid.pitch
+        form(action="/", method="get")
+          .hero-unit.span10.offset1
+            .span9.offset2.actions
+              
