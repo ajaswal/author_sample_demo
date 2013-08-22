@@ -35,6 +35,7 @@ app.get('/users', user.list);
 */
 app.get('/', authorTasks.showAll.bind(authorTasks));
 app.post('/addtask', authorTasks.addTask.bind(authorTasks));
+app.get('/view',authorTasks.addTask.bind(authorTasks));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
