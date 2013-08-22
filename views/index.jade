@@ -23,23 +23,14 @@ html(lang='en')
       border-left: 1px white solid;
       }
       }
-      @media (max-width: 480px) {
-      .copy {
-      padding: 2.5% 10%;
-      }
-      .linediv-l {
-      border-bottom: 1px white solid;
-      }
-      .linediv-r {
-      border-top: 1px white solid;
-      }
-      }
       body{
       font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      background-image: url(./patt.png);
       }
       .heading, .subheading {
       font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
       text-align: center;
+      color: #ffffff
       }
       p.lead {
       padding-top: 1.5%;
@@ -50,6 +41,10 @@ html(lang='en')
       font-size: 18px;
       line-height: 24px;
       }
+      .hero-unit{
+      background-color: #f5f580;
+      opacity: .8;
+      }
   body
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
@@ -58,7 +53,7 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='./index.html') Write for India
+          a.brand Write for India
           .nav-collapse.collapse
             ul.nav
               li.active
@@ -69,17 +64,17 @@ html(lang='en')
       .row-fluid.heading
         .span12
           h1 Please fill the form
-      .row-fluid.subheading
-        .span12
       .row-fluid.pitch
-        .span9.offset2.actions
-          .span8
-            .statistics
-              .span3
-                form.form-horizontal
-                  .control-group
-                    .controls
-                      input#inputTitle.input-xxlarge(type='text', placeholder='Title')
+        form
+          .hero-unit.span10.offset1
+            .span9.offset2.actions
+              .span8
+                .statistics
+                  .span3
+                    form.form-horizontal
+                      .control-group
+                        .controls
+                          input#inputTitle.input-xxlarge(type='text', placeholder='Title')
                   .control-group
                     .controls
                       textarea#inputDescription.input-xxlarge(rows='6', placeholder='Description')
