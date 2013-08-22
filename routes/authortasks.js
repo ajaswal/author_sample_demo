@@ -15,9 +15,10 @@ AuthorTasks.prototype = {
     task.find({titleCreated: true}, function foundTasks(err, items) {
       res.render('index',{title: 'Please fill the form ', tasks: items})
     });
-  },
+  }
+};
 
-//Add values in the database
+
   addTask: function(req,res) {
     var item = req.body.item;
     newTask = new task();
@@ -25,11 +26,16 @@ AuthorTasks.prototype = {
     newTask.description = item.desc;
     newTask.author = item.authr;
     newTask.save(function savedTask(err){
-      
       if(err) {
         throw err;
       }
     });
     res.redirect('/');
-  },
-}
+  };
+
+ view: function(req,res) {
+    showAll: function(req, res) {
+    task.find({titleCreated: true}, function foundTasks(err, items) {
+      res.render('view',{title: 'All the items ', tasks: items})
+    });
+  }};
