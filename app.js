@@ -8,7 +8,7 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var AuthorTasks = require('./routes/authortasks');
-var authorTasks = new AuthorTasks(" mongodb://teachforindia:teach1234@ds041248.mongolab.com:41248/authors");
+var authorTasks = new AuthorTasks("mongodb://teachforindia:teach1234@ds041248.mongolab.com:41248/authors");
 
 var app = express();
 
