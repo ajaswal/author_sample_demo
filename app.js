@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -8,6 +7,8 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var AuthorTasks = require('./routes/authortasks');
+var authorTasks = new AuthorTasks(" mongodb://teachforindia:teach1234@ds041248.mongolab.com:41248/authors");
 
 var app = express();
 
@@ -28,8 +29,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+/*
 app.get('/', routes.index);
 app.get('/users', user.list);
+*/
+app.get('/', authorTasks.showAll.bind(authorTasks));
+app.post('/addtask', authorTasks.addTask.bind(authorTasks));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
