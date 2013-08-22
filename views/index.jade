@@ -65,7 +65,7 @@ html(lang='en')
         .span12
           h1 Please fill the form
       .row-fluid.pitch
-        form
+        form(action="/addtask", method="post")
           .hero-unit.span10.offset1
             .span9.offset2.actions
               .span8
@@ -74,13 +74,13 @@ html(lang='en')
                     form.form-horizontal
                       .control-group
                         .controls
-                          input#inputTitle.input-xxlarge(type='text', placeholder='Title')
+                          input#inputTitle.input-xxlarge(name ='titl', type='text', placeholder='Title')
                   .control-group
                     .controls
-                      textarea#inputDescription.input-xxlarge(rows='6', placeholder='Description')
+                      textarea#inputDescription.input-xxlarge(name = 'desc', rows='6', placeholder='Description')
                   .control-group
                     .controls
-                      input#inputAuthor.input-xxlarge(type='text', placeholder='Your Name')
+                      input#inputAuthor.input-xxlarge(name = 'author', type='text', placeholder='Your Name')
                   .control-group
                     .controls
                       button.btn.btn-large.btn-warning(type='submit')  Submit
