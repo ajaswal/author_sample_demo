@@ -9,15 +9,12 @@ function AuthorTasks(connection) {
   mongoose.connect(connection);
 }
 
-
 AuthorTasks.prototype = {
   showAll: function(req, res) {
     task.find({titleCreated: true}, function foundTasks(err, items) {
       res.render('index',{title: 'Please fill the form ', tasks: items})
     });
-  }
-};
-
+  },
 
   addTask: function(req,res) {
     var item = req.body.item;
@@ -31,11 +28,13 @@ AuthorTasks.prototype = {
       }
     });
     res.redirect('/');
-  };
+  },
 
  view: function(req,res) {
     showAll: function(req, res) {
     task.find({titleCreated: true}, function foundTasks(err, items) {
       res.render('view',{title: 'All the items ', tasks: items})
     });
-  }};
+    }
+ }
+}
