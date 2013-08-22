@@ -68,4 +68,14 @@ html(lang='en')
         form(action="/", method="get")
           .hero-unit.span10.offset1
             .span9.offset2.actions
-              
+            table(border="1")
+              tr
+                td Title
+                td Description
+                td Author
+              each task in tasks
+                tr
+                  td #{task.title}
+                  td #{task.description}
+                  td #{task.author}
+                  td
