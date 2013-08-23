@@ -34,7 +34,7 @@ AuthorTasks.prototype = {
    task.find({titleCreated: true}, function foundTasks(err, items) {
      res.render('view',{title: 'All the items ', tasks: items})
     });
-    }
+    },
     
  about: function(req,res) {
     task.find({titleCreated: false}, function foundTasks(err, items) {
