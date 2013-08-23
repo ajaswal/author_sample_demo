@@ -27,7 +27,13 @@ AuthorTasks.prototype = {
         throw err;
       }
     });
-    res.redirect('/view');
+    res.redirect('/');
+    
+    $("#flash span").text("Product successfully removed.")
+            .show().parent().fadeIn()
+            .delay(2000).fadeOut('slow', function() { 
+                $("#flash span").text('') 
+            });
   },
 
  view: function(req,res) {
