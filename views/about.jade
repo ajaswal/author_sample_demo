@@ -25,7 +25,7 @@ html(lang='en')
       }
       body{
       font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      background-image: url(../images/patt.png);
+      background-image: url(patt.png);
       }
       .heading, .subheading {
       font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
@@ -60,13 +60,55 @@ html(lang='en')
                 a(href='/') Write
               li
                 a(href='/view') View
-              li 
+              li
                 a(href='/about') About
     .container
       .row-fluid.heading
         .span12
-          h1 Please fill the form
+          h1 About me
       .row-fluid.pitch
-        form(action="/", method="get")
+        form(action='/', method='get')
           .hero-unit.span10.offset1
-            .span9.offset2.actions
+            div
+              img.img-polaroid(src='/images/me.jpg')
+            .span11.offset3.actions
+              p
+                p
+                  | My name is Ajay Aswal and I have built this application
+                  br
+                  | using
+                  a(href='http://nodejs.org')
+                    | Nodejs,
+                    a(href='http://expressjs.com/')
+                      | Express,
+                      a(href='http://getbootstrap.com/2.3.2/') Twitter Bootstrap
+                      | and
+                      a(href='https://www.mongolab.com')  Mongo Lab.
+                p
+                  | The application is running on
+                  a(href='https://www.heroku.com/') Heroku.
+                p
+                  a(href='https://github.com/') Github
+                  | was used for Version control.
+                p
+                  | I don't have an *NIX OS. So I created and launched
+                  br
+                  | an
+                  a(href='http://aws.amazon.com/') AWS
+                  | EC2 instance running
+                  a(href='http://www.ubuntu.com/') Ubuntu
+                  | which I SSH'd
+                  br
+                  | using
+                  a(href='http://www.cygwin.com/') Cygwin
+                  | Terminal.
+                p
+                  | The pattern in the background is developed using
+                  a(href='http://www.gimp.org/') GIMP
+                  | .
+                p
+                  | The web app is built using a
+                  a(href='http://en.wikipedia.org/wiki/Responsive_web_design') responsive design
+                  | to provide an
+                  br
+                  | optimal viewing experience across a wide range of devices.
