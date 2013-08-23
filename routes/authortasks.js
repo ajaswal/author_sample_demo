@@ -35,5 +35,9 @@ AuthorTasks.prototype = {
      res.render('view',{title: 'All the items ', tasks: items})
     });
     }
+    about: function(req,res) {
+     res.render('about',{title: 'About me ', tasks: items})
+    });
+    }
 }
     
