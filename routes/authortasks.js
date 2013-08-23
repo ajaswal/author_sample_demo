@@ -27,13 +27,14 @@ AuthorTasks.prototype = {
         throw err;
       }
     });
-    res.redirect('/');
-    
-    $("#flash span").text("Product successfully removed.")
+      
+    $("#flash span").text("Details Inserted Successfully.")
             .show().parent().fadeIn()
             .delay(2000).fadeOut('slow', function() { 
                 $("#flash span").text('') 
             });
+    res.redirect('/');
+  
   },
 
  view: function(req,res) {
