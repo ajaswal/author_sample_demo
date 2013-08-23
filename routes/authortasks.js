@@ -27,7 +27,7 @@ AuthorTasks.prototype = {
         throw err;
       }
     });
-    res.redirect('/');
+    res.redirect('/view');
   },
 
  view: function(req,res) {
