@@ -27,12 +27,6 @@ AuthorTasks.prototype = {
         throw err;
       }
     });
-      
-    $("#flash span").text("Details Inserted Successfully.")
-            .show().parent().fadeIn()
-            .delay(2000).fadeOut('slow', function() { 
-                $("#flash span").text('') 
-            });
     res.redirect('/');
   
   },
