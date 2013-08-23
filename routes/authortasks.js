@@ -36,7 +36,8 @@ AuthorTasks.prototype = {
     });
     }
     about: function(req,res) {
-     res.render('about',{title: 'About me ', tasks: items})
+    task.find({titleCreated: true}, function foundTasks(err, items) {
+     res.render('about',{title: 'All the items ', tasks: items})
     });
     }
 }
