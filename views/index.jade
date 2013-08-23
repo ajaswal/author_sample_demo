@@ -76,13 +76,13 @@ html(lang='en')
                     form.form-horizontal
                       .control-group
                         .controls
-                          input#inputTitle.input-xxlarge(name ='item[titl]', type='text', placeholder='Title')
+                          input#inputTitle.input-xxlarge(name ='item[titl]', type='text', placeholder='Title', required='required')
                   .control-group
                     .controls
-                      textarea#inputDescription.input-xxlarge(name = 'item[desc]', rows='6', placeholder='Description')
+                      textarea#inputDescription.input-xxlarge(name = 'item[desc]', rows='6', placeholder='Description', required='required')
                   .control-group
                     .controls
-                      input#inputAuthor.input-xxlarge(name = 'item[authr]', type='text', placeholder='Your Name')
+                      input#inputAuthor.input-xxlarge(name = 'item[authr]', type='text', placeholder='Your Name', required='required')
                   .control-group
                     .controls
                       button.btn.btn-large.btn-warning(type='submit')  Submit
